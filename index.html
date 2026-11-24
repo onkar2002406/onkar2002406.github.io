@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onkar Saudagar</title>
+<meta name="description" content="Onkar Saudagar, AI Engineer. Production LLM systems, RAG, semantic routing and the cloud platform under them.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Onkar Saudagar, AI Engineer">
+<meta property="og:description" content="Production LLM systems, RAG, semantic routing and the cloud platform under them.">
+<meta property="og:url" content="https://onkar2002406.github.io/">
+<meta property="og:image" content="https://onkar2002406.github.io/poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%230b5d63' stroke-width='8'/%3E%3Cpath d='M66 30C58 22 34 25 37 40C40 53 64 47 63 62C62 77 38 78 33 68' fill='none' stroke='%2314161a' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE  personal site for hiring managers: calm, exact, confident
+   IDEA   a central bank bulletin crossed with a system schematic: ruled columns, one teal signal line
+   PICTURE the 21 second reel, full width in a night band; projects drawn as signal routes
+   COLOUR white ground, ink #14161a, deep teal #0b5d63, rule grey; night #0d1416
+   TYPE   Libre Caslon Text for display, Inter for text
+   LAYOUT name across the top with summary beside it, reel band below; phone stacks name, reel, links */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0d1416);--ink:light-dark(#14161a,#e8eeee);--mut:light-dark(#545b61,#9fb2b4);--teal:light-dark(#0b5d63,#4fb3ba);--rule:light-dark(#dfe3e5,#22302f);--soft:light-dark(#f2f6f6,#13201f);--night:#0d1416;--ring:light-dark(#0b5d63,#4fb3ba);--s:light-dark(#14161a,#e8eeee)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:var(--teal)}
+h1,h2,h3{font-family:"Libre Caslon Text",Georgia,serif;font-weight:400;line-height:1.08;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h2{font-size:clamp(32px,4.2vw,46px)}
+h3{font-size:22px;letter-spacing:-.01em}
+p{margin:0 0 12px;max-width:68ch}
+.band{padding:clamp(40px,6vw,88px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--teal);transform-origin:0 50%;transform:scaleX(0);z-index:30}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap;max-width:1240px;margin:0 auto;padding:10px max(5vw,16px)}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:600;margin-right:auto}
+.brand svg{width:38px;height:38px}
+.nav nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav nav a{color:var(--ink);text-decoration:none;padding:10px 10px;border-radius:8px;font-size:15px}
+.nav nav a:hover,.nav nav a:focus-visible{background:var(--soft)}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--teal);color:var(--teal);background:none;cursor:pointer;font-family:inherit}
+.btn.fill{background:var(--teal);color:var(--bg)}
+.btn:hover{filter:brightness(1.1)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:end}
+.hero h1{font-size:clamp(52px,8.4vw,108px);line-height:.98}
+.hero .role{font-size:clamp(19px,2vw,23px);margin-top:18px;color:var(--teal);font-weight:500}
+.hero .meta{color:var(--mut);font-size:15px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.reel{background:var(--night);color:#e8eeee;padding:clamp(24px,4vw,56px) max(5vw,16px)}
+.frame{max-width:1120px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px #24393a;transform:scale(var(--z,1));transition:transform .1s linear}
+.frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0d1416}
+.vctl{position:absolute;right:14px;bottom:14px;min-height:44px;min-width:44px;padding:0 16px;border-radius:999px;border:1px solid #3d5a5b;background:#0d1416cc;color:#e8eeee;font:600 14px Inter,sans-serif;cursor:pointer}
+.cap{max-width:1120px;margin:14px auto 0;color:#9fb2b4;font-size:14px}
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(10.5em,1fr));gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.fg{padding:22px 18px 20px 0;border-right:1px solid var(--rule)}
+.fg:last-child{border-right:0}
+.fg b{display:block;font:400 clamp(40px,5vw,58px)/1 "Libre Caslon Text",Georgia,serif;color:var(--teal);white-space:nowrap}
+.fg span{display:block;margin-top:8px;font-size:14.5px;color:var(--mut);line-height:1.45}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(20px,4vw,56px);margin-bottom:34px;align-items:end}
+.head p{color:var(--mut);margin:0}
+.tl{position:relative;padding-left:34px}
+.tl::before,.tl::after{content:"";position:absolute;left:8px;top:6px;width:3px;bottom:6px;background:var(--rule);border-radius:3px}
+.tl::after{background:var(--teal);transform-origin:50% 0;transform:scaleY(var(--p,1))}
+.job{position:relative;display:grid;grid-template-columns:minmax(0,14em) minmax(0,1fr);gap:8px 40px;padding:6px 0 38px}
+.job::before{content:"";position:absolute;left:-32px;top:9px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--teal);z-index:1}
+.when{color:var(--mut);font-size:14.5px;font-variant-numeric:tabular-nums}
+.when strong{display:block;color:var(--ink);font-size:16px;font-weight:600}
+.job ul{margin:10px 0 0;padding-left:18px}
+.job li{margin-bottom:9px;max-width:72ch}
+.job li::marker{color:var(--teal)}
+.proj{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.card{border:1px solid var(--rule);border-radius:16px;padding:26px;background:var(--bg);display:flex;flex-direction:column;gap:12px}
+.card .yr{color:var(--mut);font-size:14px}
+.route{display:flex;flex-wrap:wrap;gap:8px 0;margin:6px 0 2px;counter-reset:st}
+.st{position:relative;flex:1 1 auto;display:flex;align-items:center;font-size:13.5px;font-weight:500}
+.st i{font-style:normal;padding:7px 11px;border-radius:9px;border:1.5px solid var(--rule);background:var(--soft);transition:border-color .4s,background .4s,color .4s;white-space:nowrap}
+.st:not(:last-child)::after{content:"";flex:1;min-width:10px;height:2px;background:var(--rule);margin:0 2px}
+.lit .st i{border-color:var(--teal);color:var(--teal)}
+.st.on i{background:var(--teal);color:var(--bg);border-color:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:13.5px;padding:5px 11px;border-radius:999px;background:var(--soft);border:1px solid var(--rule)}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 36px}
+.skills h3{font-family:Inter,sans-serif;font-size:16px;font-weight:600;letter-spacing:0;padding-bottom:10px;margin-bottom:12px;border-bottom:2px solid var(--teal)}
+.two{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
+.pub{padding:16px 0;border-top:1px solid var(--rule)}
+.pub em{display:block;font-family:"Libre Caslon Text",Georgia,serif;font-style:normal;font-size:18px;line-height:1.35;margin-bottom:4px}
+.pub span{color:var(--mut);font-size:14.5px}
+.contact{background:var(--teal);color:var(--bg)}
+.contact h2{font-size:clamp(34px,5vw,58px)}
+.contact a,.contact .addr{color:var(--bg)}
+.contact .btn{border-color:var(--bg);color:var(--bg)}
+.contact .btn.fill{background:var(--bg);color:var(--teal)}
+.addr{font-size:clamp(18px,2.4vw,24px);font-weight:500;margin:18px 0 0;overflow-wrap:anywhere}
+.copied{font-size:14px;margin-left:8px}
+footer{padding:22px max(5vw,16px);font-size:14px;color:var(--mut);display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;max-width:1240px;margin:0 auto}
+.rv{transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv:not(.in){opacity:0;transform:translateY(30px)}
+@media(max-width:900px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}.proj,.two{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.hero,.head{grid-template-columns:minmax(0,1fr);align-items:start}.job{grid-template-columns:minmax(0,1fr)}.nav nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap}.nav nav a{flex:none}.fg{border-right:0;border-bottom:1px solid var(--rule)}.fg:last-child{border-bottom:0}}
+@media(max-width:560px){.skills{grid-template-columns:minmax(0,1fr)}.card{padding:20px}.vctl{right:8px;bottom:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv,.st i,.frame{transition:none}.js .rv:not(.in){opacity:1;transform:none}.frame{transform:none}}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="40" fill="none" stroke="var(--ring)" stroke-width="8"/>
+    <path d="M66 30C58 22 34 25 37 40C40 53 64 47 63 62C62 77 38 78 33 68" fill="none" stroke="var(--s)" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="66" cy="30" r="6.5" fill="var(--ring)" stroke="var(--bg)" stroke-width="2"/>
+    <circle cx="33" cy="68" r="6.5" fill="var(--ring)" stroke="var(--bg)" stroke-width="2"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top" aria-label="Onkar Saudagar, home"><svg><use href="#logo"/></svg>Onkar Saudagar</a>
+    <nav aria-label="Sections">
+      <a href="#work">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#research">Research</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="band">
+    <div class="wrap hero">
+      <div>
+        <h1>Onkar Saudagar</h1>
+        <p class="role">AI Engineer building production LLM systems and the platform under them</p>
+      </div>
+      <div>
+        <p>I have an M.S. in Data Science from Indiana University and more than three years of industry experience. At Syntheseed I ship LLM features (multi provider serving, RAG, semantic routing, structured extraction) and run the cloud platform behind five products, from a live audited decision pilot to Amazon EKS, ArgoCD and Terraform.</p>
+        <p class="meta">Lafayette, Indiana. U.S. work authorized, no sponsorship needed.</p>
+        <div class="cta">
+          <a class="btn fill" href="#contact">Get in touch</a>
+          <a class="btn" href="https://www.linkedin.com/in/onkar-vishnu-saudagar-83a9a4192/">LinkedIn</a>
+          <a class="btn" href="https://github.com/onkar2002406">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reel" aria-label="Video reel">
+    <div class="frame" id="frame">
+      <video id="vid" src="reel.mp4" poster="poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="21 second reel: logo, career highlights and the LLM fallback chain"></video>
+      <button class="vctl" id="vbtn" type="button" aria-pressed="false">Pause</button>
+    </div>
+    <p class="cap">A 21 second reel of the work below. No sound.</p>
+  </section>
+
+  <section class="band">
+    <div class="wrap figs">
+      <div class="fg rv"><b data-n="7">7</b><span>LLM providers behind one provider agnostic layer</span></div>
+      <div class="fg rv"><b data-n="7">7</b><span>environments run with GitOps on Amazon EKS</span></div>
+      <div class="fg rv"><b data-n="5">5</b><span>products on one CI/CD system with security scans</span></div>
+      <div class="fg rv"><b data-n="27" data-s="%">27%</b><span>lower monthly AWS spend with zero outages</span></div>
+      <div class="fg rv"><b data-n="3">3</b><span>peer reviewed publications</span></div>
+    </div>
+  </section>
+
+  <section class="band" id="work" style="padding-top:0">
+    <div class="wrap">
+      <div class="head rv">
+        <h2>Experience</h2>
+        <p>Production AI at a startup, research at Indiana University, and computer vision on a live manufacturing line.</p>
+      </div>
+      <div class="tl" id="tl">
+        <article class="job rv">
+          <div class="when"><strong>AI Engineer</strong>Syntheseed (formerly GenieAI)<br>Bloomington, IN<br>Mar 2024 to present</div>
+          <div>
+            <ul>
+              <li>Added an automatic fallback chain (OpenAI, then Anthropic via OpenRouter, then Groq) to a provider agnostic LLM layer over 7 providers with fast, quality and embedding tiers. When Groq retired its default models, production moved to OpenAI through configuration alone, with no changes for any caller.</li>
+              <li>Found and fixed a silent embedding similarity defect where a (cos+1)/2 remap made every relevance threshold unreachable. I then raised retrieval recall with LLM query expansion, a verified reranker and a 0.32 cosine gate set from measured real versus hallucinated scores, backed by 67 regression tests.</li>
+              <li>Turned the founder's decision engine demo into a live pilot on EKS and AWS Amplify, adding PostgreSQL sessions with Alembic migrations, Auth0 sign in, a governed audit trail, an admin console and per user history, without editing the hash frozen engine, which a CI gate now verifies on every build.</li>
+              <li>Built and run GitOps for 7 environments on Amazon EKS with ArgoCD and Kustomize, and CI/CD for 5 products on AWS CodePipeline, CodeBuild and ECR with Gitleaks, Trivy and Checkov scans, migrations on deploy, manual production approval and smoke tests. I also cut monthly AWS spend about 27 percent with zero outages.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job rv">
+          <div class="when"><strong>Research Assistant</strong>Indiana University<br>Bloomington, IN<br>May 2024 to Mar 2025</div>
+          <div>
+            <ul>
+              <li>Built a Python and SQL text mining pipeline under Prof. Hassnaa Mohammed that applied TF-IDF, K-Means clustering and topic modeling to more than 550 research articles from 8 organizations, surfacing 12 recurring themes presented to faculty in Tableau dashboards.</li>
+              <li>Ran bibliometric network analysis with VOSviewer and Python, validated outputs against the source material and wrote reproducible runbooks, which led to a co-authored paper in The Design Journal (2025).</li>
+            </ul>
+          </div>
+        </article>
+        <article class="job rv">
+          <div class="when"><strong>AI and ML Engineer</strong>AlgoAnalytics<br>Pune, India<br>Sep 2022 to Apr 2023</div>
+          <div>
+            <ul>
+              <li>Built Apache Spark ETL pipelines over more than 5,000 industrial CCTV images from a live manufacturing line, engineered statistical features such as kurtosis, entropy and pixel ratios, and applied deep learning anomaly detection that reached 86.49 percent accuracy.</li>
+              <li>Traced a 27 percent false positive rate to inconsistent batch normalization in the feature extraction layer, rebuilt the pipeline and confirmed in production that false positives fell 27 percent and true positives rose 12 percent.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="projects" style="background:var(--soft)">
+    <div class="wrap">
+      <div class="head rv">
+        <h2>Projects</h2>
+        <p>Two systems I designed and built end to end. Each route lights up in the order a request travels through it.</p>
+      </div>
+      <div class="proj">
+        <article class="card rv">
+          <span class="yr">Syntheseed, 2024 to present</span>
+          <h3>Pack driven decision pipeline</h3>
+          <div class="route" aria-label="Seven layers in order">
+            <span class="st"><i>Ingest</i></span><span class="st"><i>Extract</i></span><span class="st"><i>Normalize</i></span><span class="st"><i>Evidence</i></span><span class="st"><i>Score</i></span><span class="st"><i>Compose</i></span><span class="st"><i>Authority</i></span>
+          </div>
+          <p>A seven layer decision pipeline in plain Python: ingestion, extraction, normalization, an evidence repository, proof of decision scoring, composition and final authority. I made it pack driven instead of hardcoded, and a two tier LLM and keyword router maps a free text use case to the right domain pack.</p>
+          <div class="chips"><span>Aviation</span><span>Capital</span><span>Clinical</span><span>Credit</span><span>Cyber</span><span>Enterprise</span><span>Supply chain</span><span>Litigation</span></div>
+        </article>
+        <article class="card rv">
+          <span class="yr">Open source, 2024</span>
+          <h3>Onkar_FetiiAI, production LLM inference service</h3>
+          <div class="route" aria-label="Request path">
+            <span class="st"><i>Request</i></span><span class="st"><i>FastAPI</i></span><span class="st"><i>Cache</i></span><span class="st"><i>FAISS</i></span><span class="st"><i>OpenAI</i></span><span class="st"><i>Answer</i></span>
+          </div>
+          <p>An async FastAPI service that pairs the OpenAI API with FAISS semantic retrieval over Sentence-Transformers embeddings. It adds sub second semantic caching, latency monitoring, structured logging and a full unit test suite from the first commit.</p>
+          <div class="chips"><span>FastAPI</span><span>FAISS</span><span>Sentence-Transformers</span><span>pytest</span></div>
+          <p style="margin:auto 0 0"><a class="btn" href="https://github.com/onkar2002406/Onkar_FetiiAI">View the code on GitHub</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="skills">
+    <div class="wrap">
+      <div class="head rv">
+        <h2>Skills</h2>
+        <p>The tools I use in production today, grouped the way a platform is built: models, data, services and the cloud they run on.</p>
+      </div>
+      <div class="skills" id="sk"></div>
+    </div>
+  </section>
+
+  <section class="band" id="research" style="padding-top:0">
+    <div class="wrap two">
+      <div class="rv">
+        <h2 style="margin-bottom:18px">Publications</h2>
+        <div class="pub"><em>An exploratory text-mining approach to analyzing DEI-related issues in eight leading architecture and design firms' publications</em><span>Saudagar O. et al. The Design Journal, 2025</span></div>
+        <div class="pub"><em>Sentiment and Statistical Analysis on Custom Twitter Dataset for the 2022 Russo-Ukrainian Conflict</em><span>Thakkar H., Patil A., Saudagar O., Yenkikar A. IEEE IITCEE, 2023</span></div>
+        <div class="pub"><em>Image Classification Based on Quality of Pixels</em><span>Saudagar O. et al. ACM Springer ICHCSC, 2023</span></div>
+      </div>
+      <div class="rv">
+        <h2 style="margin-bottom:18px">Education</h2>
+        <div class="pub"><em>M.S. Data Science</em><span>Indiana University Bloomington, GPA 3.71 of 4.0<br>Aug 2023 to May 2025</span></div>
+        <div class="pub"><em>B.E. Information Technology, Honors in Data Science</em><span>SPPU, Pune, India, GPA 9.12 of 10.0<br>Aug 2019 to May 2023</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contact">
+    <div class="wrap rv">
+      <h2>Hiring for an AI engineering role? I would like to hear about it.</h2>
+      <p class="addr">omkarvsaudagar@gmail.com</p>
+      <div class="cta">
+        <button class="btn fill" id="copy" type="button">Copy email</button>
+        <a class="btn" href="mailto:omkarvsaudagar@gmail.com">Send an email</a>
+        <a class="btn" href="https://www.linkedin.com/in/onkar-vishnu-saudagar-83a9a4192/">LinkedIn</a>
+        <a class="btn" href="https://github.com/onkar2002406">GitHub</a>
+        <span class="copied" id="cmsg" role="status"></span>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><span>Onkar Saudagar, AI Engineer. Lafayette, Indiana.</span><span>Designed and built in 2026</span></footer>
+
+<script>
+{
+const SK=[
+ ["AI and LLM",["OpenAI GPT-4o","Structured Outputs","Anthropic Claude","OpenRouter","Groq","Hugging Face","Ollama","Together AI","LangChain","LangGraph","RAG","ChromaDB","FAISS","SBERT","Sentence-Transformers","Embeddings","Reranking","Prompt Engineering","LLM Evaluation","Token Cost Optimization"]],
+ ["ML and data science",["PyTorch","TensorFlow","Scikit-learn","BERTopic","NLP","TF-IDF","Clustering","Topic Modeling","Computer Vision","CNN","DenseNet","Feature Engineering","Statistical Analysis","Pandas","NumPy","Matplotlib"]],
+ ["Data engineering",["Apache Spark","Amazon SQS","ETL Pipelines","PostgreSQL","Amazon RDS","MySQL","MongoDB","Redis","Elasticsearch","SQL","Web Scraping","Data Validation"]],
+ ["Backend and APIs",["Python 3.12","FastAPI","Flask","SQLAlchemy","Alembic","Gunicorn","REST APIs","Server-Sent Events","JWT","OAuth 2.0","Auth0","Async Programming","Pydantic","pytest"]],
+ ["Cloud and DevOps",["AWS EKS","ECS","EC2","S3","RDS","Lambda","IAM","IRSA","VPC","Secrets Manager","Amplify","Route 53","CloudFront","ALB","Docker","Kubernetes","Terraform","ArgoCD","Kustomize","CodePipeline","CodeBuild","Amazon ECR","KEDA","HPA","Prometheus","Grafana","Fluent Bit","Linux","Bash"]],
+ ["Tools and practice",["Git","GitHub","Postman","Jupyter","Tableau","Power BI","Claude Code","GitHub Copilot","Cursor","Agile","Scrum"]]
+];
+document.getElementById("sk").innerHTML=SK.map(([h,l])=>`<div class="rv"><h3>${h}</h3><div class="chips">${l.map(x=>`<span>${x}</span>`).join("")}</div></div>`).join("");
+
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const vid=document.getElementById("vid"),vbtn=document.getElementById("vbtn");
+vbtn.addEventListener("click",()=>{if(vid.paused){vid.play().catch(()=>{});}else{vid.pause();}});
+vid.addEventListener("play",()=>{vbtn.textContent="Pause";vbtn.setAttribute("aria-pressed","false")});
+vid.addEventListener("pause",()=>{vbtn.textContent="Play";vbtn.setAttribute("aria-pressed","true")});
+if(reduce){vid.removeAttribute("autoplay");vid.pause();}
+
+const copy=document.getElementById("copy"),cmsg=document.getElementById("cmsg");
+copy.addEventListener("click",()=>{
+  const done=ok=>{cmsg.textContent=ok?"Copied":"Select the address above to copy it"};
+  try{navigator.clipboard.writeText("omkarvsaudagar@gmail.com").then(()=>done(true),()=>done(false));}catch(e){done(false)}
+});
+
+function count(b){
+  const n=+b.dataset.n,s=b.dataset.s||"",t0=performance.now(),d=1100;
+  const step=t=>{const k=Math.min(1,(t-t0)/d),e=1-(1-k)**3;b.textContent=Math.round(n*e)+s;if(k<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step);
+}
+function light(r){
+  r.classList.add("lit");const st=[...r.querySelectorAll(".st")];
+  st.forEach((x,i)=>setTimeout(()=>{st.forEach(y=>y.classList.remove("on"));x.classList.add("on")},i*380));
+  setTimeout(()=>st.forEach(y=>y.classList.remove("on")),st.length*380+300);
+}
+
+if(!reduce&&"IntersectionObserver" in window){
+  document.documentElement.classList.add("js");
+  const io=new IntersectionObserver(es=>{for(const e of es){if(!e.isIntersecting)continue;const el=e.target;el.classList.add("in");
+    el.querySelectorAll("b[data-n]").forEach(count);if(el.matches("b[data-n]"))count(el);
+    el.querySelectorAll(".route").forEach(light);io.unobserve(el);}},{threshold:.15,rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+  setTimeout(()=>document.querySelectorAll(".rv").forEach(el=>{const r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add("in")}),60);
+}
+
+const bar=document.getElementById("bar"),tl=document.getElementById("tl"),frame=document.getElementById("frame");
+let tick=false;
+function onScroll(){
+  tick=false;const h=document.documentElement.scrollHeight-innerHeight;
+  bar.style.transform=`scaleX(${h>0?scrollY/h:0})`;
+  if(reduce)return;
+  const r=tl.getBoundingClientRect(),p=(innerHeight*.7-r.top)/r.height;
+  tl.style.setProperty("--p",Math.max(0,Math.min(1,p)).toFixed(3));
+  const f=frame.getBoundingClientRect(),q=1-Math.max(0,Math.min(1,(f.top-innerHeight*.15)/(innerHeight*.7)));
+  frame.style.setProperty("--z",(0.94+0.06*q).toFixed(3));
+}
+addEventListener("scroll",()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+addEventListener("resize",onScroll);
+onScroll();
+}
+</script>
+</body>
+</html>
